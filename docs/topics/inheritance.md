@@ -22,7 +22,14 @@ open class Base(p: Int)
 
 class Derived(p: Int) : Base(p)
 ```
+To declare multiple explicit supertypes, place a comma between them in the class header:
 
+```kotlin
+open class Base1(p: Int)
+open class Base2(q: Int)
+
+class Derived(p: Int) : Base1(p), Base2(q)
+```
 If the derived class has a primary constructor, the base class can (and must) be initialized in that primary constructor
 according to its parameters.
 
